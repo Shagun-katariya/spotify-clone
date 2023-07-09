@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    overflow:hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.flex{
+    display: flex;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.left{
+    width: 20vw;
+    color: white;
+    padding: 0px 20px;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+.right{
+    position: relative;
+    color: white;
+    width: calc(100vw - 20vw); ;
+    background: #141313e3;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.left:hover,
+.left:focus-within,
+.left:hover::-webkit-scrollbar,
+.left:focus-within::-webkit-scrollbar {
+    overflow-y: auto;
+    /* Show the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);  
+}
+
+
+.right:hover,
+.right:focus-within,
+.right:hover::-webkit-scrollbar,
+.right:focus-within::-webkit-scrollbar {
+    overflow-y: auto;
+    /* Show the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);  
+}
+
+.left::-webkit-scrollbar-track,
+.right::-webkit-scrollbar-track {
+  background-color: black /* Adjust the color sensitivity of the scrollbar track */
+}
+
+.left::-webkit-scrollbar-thumb,
+.right::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the color sensitivity of the scrollbar thumb */
+}
+
+
+.leftImg{
+    width: 36px;
+    margin: 8px 18px;
+    color: white;
+}
+
+.leftImgText{
+    display: flex;
+    margin-top: 8px;
+    margin-left: -13px;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+.upper{
+    display: flex;
+    flex-direction: column;
+    background-color: #141313e3;
+    border-radius: 4px;
+}
+
+.lower{
+    margin-top: 10px;
+    background-color: #141313e3;
+    border-radius: 4px;
+    height: 45vw;
+}
+.lower11Img{
+    width: 26px;
+    height: 21px;
+    margin-left: 34px;
+    margin-top: 15px;
+}
+.lower12Img{
+    width: 22px;
+    height: 17px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+#spotify-navbar {
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: #492e2e;
+    height: 61px;
+    border-radius: 17px;
+    display: flex;
+    padding-left: 706px;
+    align-items: center;
+    margin-right: 11px;
+}
+
+.navbar-button1{
+    height: 12px;
+    width: 114px;
+    margin: 5px 10px;
+    color: black;
+    background: white;
+    border-radius: 18px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.navbar-button2{
+    height: 16px;
+    width: 72px;
+    margin: 5px 10px;
+    color: white;
+    background: black;
+    border-radius: 18px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.navbar-profile{
+    width: 30px;
+    border-radius: 20px;
+    height: 30px;
+}
+
+
+
+.rightImg{
+    height: 222px;
+    width: 150px;
+    margin: 0 10px;
+}
+
+.lower-buttons{
+    background-color: #212020;
+    border-radius: 21px;
+    margin: 10px 10px;
+    padding: 10px 12px;
+    font-size: 12px;
+    border: 0;
+    color: white;
+}
+
+.bottom{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#myprogressbar{
+    width: 36vw;
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 14px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+.songinfo{
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    left: 10vw;
+}
+
+.footer1{
+    height: 230px;
+    padding: 12px 19px;
+}
+
+.footer1 li{
+    margin: 21px;
+}
+
+.footer2{
+    height: 190px;
+    padding: 23px 19px;
+    margin-left: 163px;
+}
+
+.footer2Img{
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+}
+hr {
+    border: 0;
+    background-color: #343232;;
+    height: 1.2px;
+    margin-bottom: -54px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.main_footer{
+    height: 107px;
+    margin: 40px 30px;
+    font-size: 13px;
+    color: grey;
+}
+
+.main1{
+    margin: 0 7px;
+    text-decoration: none;
+    color: grey;
+}
+
+.main2{
+    margin-left: 399px;
+}
