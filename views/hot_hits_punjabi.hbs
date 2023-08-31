@@ -109,19 +109,24 @@
             });
         });
 
-        document.getElementById('next').addEventListener('click', () => {
-            if (songIndex >= 9) {
-                songIndex = 0;
+        audioElement.addEventListener('ended', playNextSong);
+
+        function playNextSong() {
+            if (songIndex < songs.length - 1) {
+                songIndex++;
             } else {
-                songIndex += 1;
+                songIndex = 0;
             }
-            audioElement.src = `/songs/hot_hits_punjabi/${songIndex + 1}.mp3`;
+            audioElement.src = `/songs/equal_india/${songIndex + 1}.mp3`;
             masterSongName.innerText = songs[songIndex].songName;
             audioElement.currentTime = 0;
             audioElement.play();
+            gif.style.opacity = 1;
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
-        });
+        }
+
+        document.getElementById('next').addEventListener('click', playNextSong);
 
         document.getElementById('previous').addEventListener('click', () => {
             if (songIndex <= 0) {
@@ -129,13 +134,14 @@
             } else {
                 songIndex -= 1;
             }
-            audioElement.src = `/songs/hot_hits_punjabi/${songIndex + 1}.mp3`;
+            audioElement.src = `/songs/equal_india/${songIndex + 1}.mp3`;
             masterSongName.innerText = songs[songIndex].songName;
             audioElement.currentTime = 0;
             audioElement.play();
             masterPlay.classList.remove('fa-play-circle');
             masterPlay.classList.add('fa-pause-circle');
         });
+
     </script>
 </body>
 
